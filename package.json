@@ -1,0 +1,22 @@
+{
+  "name": "graphql_movie_api",
+  "version": "1.0.0",
+  "description": "Movie API with GraphQL",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alstn2468/GraphQL_Movie_API.git"
+  },
+  "author": "Minsu Kim <alstn2468_@naver.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/alstn2468/GraphQL_Movie_API/issues"
+  },
+  "homepage": "https://github.com/alstn2468/GraphQL_Movie_API#readme",
+  "dependencies": {
+    "graphql-yoga": "^1.18.3"
+  }
+}
