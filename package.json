@@ -4,7 +4,8 @@
   "description": "Movie API with GraphQL",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon --exec babel-node index.js"
+    "start": "NODE_ENV=development nodemon --exec babel-node index.js",
+    "start:production": "NODE_ENV=production nodemon --exec babel-node index.js"
   },
   "repository": {
     "type": "git",
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/alstn2468/GraphQL_Movie_API#readme",
   "dependencies": {
+    "dotenv": "^8.2.0",
     "graphql-yoga": "^1.18.3"
   },
   "devDependencies": {
