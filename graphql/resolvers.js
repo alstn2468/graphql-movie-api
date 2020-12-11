@@ -1,6 +1,9 @@
+import { getMovies } from '../database';
+
 const resolvers = {
-  Query: { },
-  Mutation: {},
+  Query: {
+    movies: () => getMovies(),
+   },
 };
 
 export default resolvers;

@@ -19,7 +19,8 @@
   "homepage": "https://github.com/alstn2468/GraphQL_Movie_API#readme",
   "dependencies": {
     "dotenv": "^8.2.0",
-    "graphql-yoga": "^1.18.3"
+    "graphql-yoga": "^1.18.3",
+    "node-fetch": "^2.6.1"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
