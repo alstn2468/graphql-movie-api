@@ -5,9 +5,12 @@ if (!API_URL) {
   throw new Error('API_URL does not exist at .env file.');
 }
 
-const getMovies = (limit, minimumRating) => {
-  fetch(`${API_URL}`)
-    .then((response) => response.json())
-    .then((jsonResponse) => jsonResponse.data.movies)
-    .catch((error) => console.log(error));
+export const getMovies = async (limit, minimumRating) => {
+  try {
+    const response = await fetch(`${API_URL}`)
+    const jsonResponse = await response.json();
+    return jsonResponse.data.movies;
+  } catch (error) {
+    console.error(error);
+  }
 }
