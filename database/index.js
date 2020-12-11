@@ -1,6 +1,5 @@
+import { API_URL } from '../config';
 import fetch from 'node-fetch';
-
-const API_URL = process.env.API_URL;
 
 if (!API_URL) {
   throw new Error('API_URL does not exist at .env file.');

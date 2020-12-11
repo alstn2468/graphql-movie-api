@@ -1,14 +1,6 @@
 import { GraphQLServer } from 'graphql-yoga';
-import dotenv from 'dotenv';
+import { serverOptions } from './config';
 import resolvers from './graphql/resolvers'
-
-dotenv.config({ path: `/env/${process.env.NODE_ENV}` });
-
-const options = {
-  port: process.env.PORT || 4000,
-  endpoint: process.env.ENDPOINT || '/graphql',
-  playground: process.env.PLAYGROUND || false,
-};
 
 const server = new GraphQLServer({
   typeDefs: 'graphql/schema.graphql',
@@ -16,9 +8,9 @@ const server = new GraphQLServer({
 });
 
 server.start(
-  options, 
+  serverOptions,
   () => {
     console.log('GraphQL Server Running on localhost:4000');
-    console.log(`Running options :${JSON.stringify(options)}`);
+    console.log(`Running options :${JSON.stringify(serverOptions)}`);
   },
 );
